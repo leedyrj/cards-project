@@ -14,9 +14,12 @@ form.addEventListener('submit', (e) => {
     removeButton.textContent = 'Remove';
     ul.appendChild(cardArea);
     cardArea.appendChild(removeButton);
-    const backgroundButton = document.createElement('button');
-    backgroundButton.textContent = 'Background Color';
+    const backgroundButton = document.createElement('input');
+    backgroundButton.type = 'color';
+    const textButton = document.createElement('input');
+    textButton.type = 'color';
     cardArea.appendChild(backgroundButton);
+    cardArea.appendChild(textButton);
 
 });
 
