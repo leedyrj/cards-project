@@ -7,10 +7,12 @@ body {
     width: 1000px;
 }
 
-div {
+li {
     width: 200px;
     height: 200px;
     background-color: linen;
     border: 5px black solid;
     margin: 10px;
+    font-size: 3em;
+    list-style: none;
 }

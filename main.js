@@ -2,16 +2,29 @@
 // 2. When the user enters in text into the text area and then clicks the create button, create a new card element in the DOM. You decide the height/width of the card.
 const form = document.getElementById('registrar');
 const input = form.querySelector('input');
+const ul = document.getElementById('card-space');
+
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    let cardOutput = input.value;
-    const div = document.getElementById('card-space')
-    const cardArea = document.createElement('div');
+    const cardOutput = input.value;
+    const cardArea = document.createElement('li');
     cardArea.textContent = cardOutput;
-    div.appendChild(cardArea);
-    var x = document.createElement("INPUT");
-    x.setAttribute("type", "color");
+    const removeButton = document.createElement('button');
+    removeButton.textContent = 'Remove';
+    ul.appendChild(cardArea);
+    cardArea.appendChild(removeButton);
+    const backgroundButton = document.createElement('button');
+    backgroundButton.textContent = 'Background Color';
+    cardArea.appendChild(backgroundButton);
+
+});
+
+ul.addEventListener('click', (e) => {
+    if (e.target.textContent === 'Remove') {
+        const li = e.target.parentNode;
+        ul.removeChild(li);
+    }
 });
 
 
