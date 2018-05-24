@@ -5,8 +5,13 @@ const input = form.querySelector('input');
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    let cardOutput = document.getElementById('card-input').value;
-    document.getElementById('card').innerHTML = cardOutput;
+    let cardOutput = input.value;
+    const div = document.getElementById('card-space')
+    const span = document.createElement('span');
+    span.textContent = cardOutput;
+    div.appendChild(span);
+    span.style.height = '100px';
+    document.getElementById('card-space').style.width = '100px';
 });
 
 // let submitButton = document.getElementById('create-button');
