@@ -2,8 +2,15 @@ body {
     background-color: green;
 }
 
-span {
-    height: 10em;
-    width: 10em;
+#card-space {
+    height: 1000px;
+    width: 1000px;
+}
+
+div {
+    width: 200px;
+    height: 200px;
     background-color: linen;
+    border: 5px black solid;
+    margin: 10px;
 }

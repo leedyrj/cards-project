@@ -1,5 +1,5 @@
-console.log('working')
-
+// 1. Create an HTML page that contains a text area and a button labeled Create.
+// 2. When the user enters in text into the text area and then clicks the create button, create a new card element in the DOM. You decide the height/width of the card.
 const form = document.getElementById('registrar');
 const input = form.querySelector('input');
 
@@ -7,24 +7,16 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     let cardOutput = input.value;
     const div = document.getElementById('card-space')
-    const span = document.createElement('span');
-    span.textContent = cardOutput;
-    div.appendChild(span);
-    span.style.height = '100px';
-    document.getElementById('card-space').style.width = '100px';
+    const cardArea = document.createElement('div');
+    cardArea.textContent = cardOutput;
+    div.appendChild(cardArea);
+    var x = document.createElement("INPUT");
+    x.setAttribute("type", "color");
 });
 
-// let submitButton = document.getElementById('create-button');
 
-// submitButton.addEventListener('click', function() {
-//     let node = document.createElement('button');
-//     node.appendChild('body');
-// });
-
-
-// 1. Create an HTML page that contains a text area and a button labeled Create.
-// 2. When the user enters in text into the text area and then clicks the create button, create a new card element in the DOM. You decide the height/width of the card.
 // 3. Above the text on each card, there must be two input controls of type color.
+
 // 4. Above the text on each card, there must be a button element labeled Delete.
 // 5. When the user selects a color from the first input, then the background color of that card, and no other cards, should change to the color chosen.
 // 6. When the user selects a color from the second input, then the font color of that card, and no other cards, should change to the color chosen.
